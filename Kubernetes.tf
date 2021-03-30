@@ -63,7 +63,7 @@ resource "aws_security_group" "allow_nginx" {
 #Create Cluster with EKS
 module "eks" {
   source       = "git::https://github.com/terraform-aws-modules/terraform-aws-eks.git?ref=v12.1.0"
-  cluster_name = "local.cluster_name"
+  cluster_name = "Cluster_Kubernetes"
   vpc_id       = aws_vpc.VPC_Default.id
   subnets      = aws_subnet.Subnet1.id
 
